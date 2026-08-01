@@ -3,26 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arqnom</title>
+<title>Arqnom | Arquitetura e Interiores</title>
+<meta name="description" content="Projetos de arquitetura e interiores pensados pra sua rotina, de cabanas a automação residencial. Atendimento presencial ou on-line.">
+
+<!-- Open Graph / Facebook, WhatsApp, Instagram, LinkedIn -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ampbio.github.io/ARQNOM/">
+<meta property="og:title" content="Arqnom | Arquitetura e Interiores">
+<meta property="og:description" content="Projetos de arquitetura e interiores pensados pra sua rotina, de cabanas a automação residencial. Atendimento presencial ou on-line.">
+<meta property="og:image" content="https://ampbio.github.io/ARQNOM/imagens/preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pt_BR">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Arqnom | Arquitetura e Interiores">
+<meta name="twitter:description" content="Projetos de arquitetura e interiores pensados pra sua rotina, de cabanas a automação residencial. Atendimento presencial ou on-line.">
+<meta name="twitter:image" content="https://ampbio.github.io/ARQNOM/imagens/preview.jpg">
+
 <meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" type="image/jpeg" href="imagens/fav.jpg">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https:; frame-src https://maps.google.com https://www.google.com; script-src 'self' 'unsafe-inline'; connect-src 'self'; base-uri 'self'; form-action 'self' https://docs.google.com; frame-ancestors 'self'; object-src 'none';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https:; frame-src https://maps.google.com https://www.google.com; script-src 'self' 'unsafe-inline'; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; object-src 'none';">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy-deep:#0c1a24;
-    --navy:#12222f;
-    --teal:#1f5c63;
-    --teal-light:#2c8c8f;
-    --teal-bright:#3d9e97;
-    --teal-mid:#1f6b6a;
-    --navy-teal:#16374a;
-    --teal-target:#105d71;
-    --accent:#e8e2d1;
-    --off-white:#e8e2d1;
-    --muted:#9fb3ba;
+    --navy-deep:#00121f;
+    --navy:#002b4b;
+    --teal:#025d77;
+    --teal-light:#028a93;
+    --teal-bright:#04a6b0;
+    --teal-mid:#025d77;
+    --navy-teal:#023654;
+    --teal-target:#025d77;
+    --accent:#eee8d6;
+    --off-white:#eee8d6;
+    --muted:#9fb8c0;
   }
 
   html{
@@ -35,7 +54,7 @@
     margin:0;
     min-height:100vh;
     min-height:100dvh;
-    background: radial-gradient(circle at 50% 0%, var(--navy) 0%, var(--navy-deep) 60%, #060d12 100%);
+    background: radial-gradient(circle at 50% 0%, var(--navy) 0%, var(--navy-deep) 60%, #00080d 100%);
     font-family:'Poppins', sans-serif;
     font-weight:300;
     color:var(--off-white);
@@ -200,8 +219,8 @@
     width:100%;
     padding:16px 20px;
     border-radius:14px;
-    background:linear-gradient(180deg, rgba(16,93,113,0.55), rgba(16,93,113,0.4));
-    border:1px solid rgba(16,93,113,0.7);
+    background:linear-gradient(180deg, rgba(2,93,119,0.55), rgba(2,93,119,0.4));
+    border:1px solid rgba(2,93,119,0.7);
     color:var(--off-white);
     text-decoration:none;
     font-size:15px;
@@ -211,7 +230,7 @@
   .btn:hover{
     transform:translateY(-2px);
     border-color:var(--accent);
-    background:linear-gradient(180deg, rgba(16,93,113,0.7), rgba(16,93,113,0.55));
+    background:linear-gradient(180deg, rgba(2,93,119,0.7), rgba(2,93,119,0.55));
   }
   .btn:focus-visible{
     outline:2px solid var(--accent);
@@ -229,6 +248,8 @@
     background:rgba(255,255,255,0.06);
   }
   .btn .icon svg{width:19px;height:19px;}
+  .btn .icon.icon-img{overflow:hidden;padding:0;}
+  .btn .icon.icon-img img{width:100%;height:100%;object-fit:cover;display:block;}
 
   .btn .label{flex:1;text-align:center;min-width:0;}
   .btn .label small{
@@ -277,10 +298,16 @@
     height:130px;
     overflow:hidden;
     background:
-      linear-gradient(rgba(12,26,36,0.35), rgba(12,26,36,0.55)),
-      repeating-linear-gradient(0deg, rgba(159,179,186,0.09) 0 1px, transparent 1px 26px),
-      repeating-linear-gradient(90deg, rgba(159,179,186,0.09) 0 1px, transparent 1px 26px),
-      #14262f;
+      linear-gradient(rgba(0,18,31,0.35), rgba(0,18,31,0.55)),
+      repeating-linear-gradient(0deg, rgba(159,184,192,0.09) 0 1px, transparent 1px 26px),
+      repeating-linear-gradient(90deg, rgba(159,184,192,0.09) 0 1px, transparent 1px 26px),
+      #012338;
+  }
+  .map-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg, rgba(0,18,31,0.45) 0%, rgba(0,18,31,0.25) 45%, rgba(0,18,31,0.55) 100%);
+    pointer-events:none;
   }
   .map-pin{
     position:absolute;
@@ -338,7 +365,7 @@
   .modal-overlay{
     position:fixed;
     inset:0;
-    background:rgba(6,13,18,0.78);
+    background:rgba(0,9,15,0.78);
     backdrop-filter:blur(3px);
     display:flex;
     align-items:center;
@@ -358,14 +385,14 @@
     position:relative;
     width:100%;
     max-width:400px;
-    max-height:88vh;
-    max-height:88dvh;
+    max-height:92vh;
+    max-height:92dvh;
     overflow-y:auto;
     -webkit-overflow-scrolling:touch;
     background:linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
     border:1px solid rgba(255,255,255,0.1);
     border-radius:18px;
-    padding:36px 20px 22px;
+    padding:28px 18px 18px;
     transform:translateY(14px) scale(0.97);
     transition:transform 0.22s ease;
   }
@@ -375,10 +402,10 @@
 
   .modal-close{
     position:absolute;
-    top:14px;
-    right:14px;
-    width:32px;
-    height:32px;
+    top:12px;
+    right:12px;
+    width:30px;
+    height:30px;
     border-radius:50%;
     background:rgba(255,255,255,0.06);
     border:1px solid rgba(255,255,255,0.1);
@@ -394,12 +421,12 @@
 
   .modal-title{
     font-family:'Cinzel', serif;
-    font-size:19px;
+    font-size:17px;
     font-weight:600;
     text-align:center;
     text-transform:uppercase;
     letter-spacing:0.08em;
-    margin:0 0 18px;
+    margin:0 0 12px;
     color:var(--off-white);
   }
 
@@ -415,7 +442,7 @@
   .slides{
     display:flex;
     transition:transform 0.45s cubic-bezier(.65,.05,.36,1);
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 4 / 3;
   }
   .slide{min-width:100%;height:100%;position:relative;}
   .slide img{width:100%;height:100%;object-fit:cover;display:block;-webkit-user-drag:none;user-select:none;}
@@ -428,9 +455,9 @@
     justify-content:center;
     gap:10px;
     background:
-      linear-gradient(rgba(12,26,36,0.25), rgba(12,26,36,0.55)),
-      repeating-linear-gradient(45deg, rgba(159,179,186,0.05) 0 2px, transparent 2px 22px),
-      linear-gradient(160deg, #14262f, #0c1a24);
+      linear-gradient(rgba(0,18,31,0.25), rgba(0,18,31,0.55)),
+      repeating-linear-gradient(45deg, rgba(159,184,192,0.05) 0 2px, transparent 2px 22px),
+      linear-gradient(160deg, #012338, #00121f);
     color:var(--muted);
     font-size:12px;
     letter-spacing:0.08em;
@@ -445,7 +472,7 @@
     width:36px;
     height:36px;
     border-radius:50%;
-    background:rgba(6,13,18,0.55);
+    background:rgba(0,9,15,0.55);
     border:1px solid rgba(255,255,255,0.15);
     color:var(--off-white);
     display:flex;
@@ -454,7 +481,7 @@
     cursor:pointer;
     z-index:2;
   }
-  .nav-btn:hover{background:rgba(44,140,143,0.35);border-color:var(--teal-light);}
+  .nav-btn:hover{background:rgba(2,138,147,0.35);border-color:var(--teal-light);}
   .nav-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
   .nav-btn.prev{left:10px;}
   .nav-btn.next{right:10px;}
@@ -464,7 +491,7 @@
     position:absolute;
     top:12px;
     right:12px;
-    background:rgba(6,13,18,0.55);
+    background:rgba(0,9,15,0.55);
     border:1px solid rgba(255,255,255,0.12);
     color:var(--off-white);
     font-size:10.5px;
@@ -477,7 +504,7 @@
   .dots{
     display:flex;
     gap:6px;
-    margin-top:14px;
+    margin-top:8px;
     flex-wrap:wrap;
     justify-content:center;
   }
@@ -493,6 +520,34 @@
   }
   .dot.active{background:radial-gradient(circle, var(--accent) 4px, transparent 4px);}
   .dot:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+
+  .modal-cta{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    width:100%;
+    margin-top:14px;
+    padding:10px 16px;
+    border-radius:12px;
+    background:linear-gradient(180deg, rgba(2,93,119,0.55), rgba(2,93,119,0.4));
+    border:1px solid rgba(2,93,119,0.7);
+    color:var(--off-white);
+    text-decoration:none;
+    font-size:13px;
+    font-weight:500;
+    transition:transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+  }
+  .modal-cta:hover{
+    transform:translateY(-2px);
+    border-color:var(--accent);
+    background:linear-gradient(180deg, rgba(2,93,119,0.7), rgba(2,93,119,0.55));
+  }
+  .modal-cta:focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:2px;
+  }
+  .modal-cta svg{width:16px;height:16px;flex:0 0 auto;}
 </style>
 </head>
 <body>
@@ -512,7 +567,7 @@
     </p>
 
     <div class="social-icons">
-      <a href="https://api.whatsapp.com/send/?phone=5548992063248&text=Ol%C3%A1!%20Eu%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20agora!&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+      <a href="https://api.whatsapp.com/send/?phone=554892063248&text=Ol%C3%A1!%20Eu%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20agora!&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.71.45 3.38 1.3 4.85L2.05 22l5.36-1.4a9.9 9.9 0 0 0 4.63 1.18h.01c5.46 0 9.9-4.45 9.9-9.9 0-2.65-1.03-5.13-2.9-7-1.87-1.87-4.35-2.9-7-2.9zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.13.82.84-3.06-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24zm4.52-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.48c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.22.89 2.4 1.02 2.57.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
       </a>
       <a href="https://www.instagram.com/arqnom/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -524,7 +579,7 @@
 
     <div class="buttons">
 
-      <a href="https://api.whatsapp.com/send/?phone=5548992063248&text=Ol%C3%A1!%20Eu%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20agora!&type=phone_number&app_absent=0" class="btn whatsapp" target="_blank" rel="noopener noreferrer">
+      <a href="https://api.whatsapp.com/send/?phone=554892063248&text=Ol%C3%A1!%20Eu%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20agora!&type=phone_number&app_absent=0" class="btn whatsapp" target="_blank" rel="noopener noreferrer">
         <span class="icon">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.71.45 3.38 1.3 4.85L2.05 22l5.36-1.4a9.9 9.9 0 0 0 4.63 1.18h.01c5.46 0 9.9-4.45 9.9-9.9 0-2.65-1.03-5.13-2.9-7-1.87-1.87-4.35-2.9-7-2.9zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.13.82.84-3.06-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24zm4.52-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.48c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.22.89 2.4 1.02 2.57.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
         </span>
@@ -533,22 +588,14 @@
       </a>
 
       <a href="#" class="btn preview" id="openProjectsModal">
-        <span class="icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M9 20h6"/></svg>
+        <span class="icon icon-img">
+          <img src="imagens/fav.jpg" alt="" loading="lazy">
         </span>
         <span class="label">Veja alguns dos projetos aqui!<small>Uma prévia rápida do meu trabalho</small></span>
         <span class="arrow">→</span>
       </a>
 
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdn6ZyjYdEcHfU8JnGbyipDn4GQc82vKRTXSgXGu2Y6zpXhng/viewform?usp=send_form" class="btn portfolio" target="_blank" rel="noopener noreferrer">
-        <span class="icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V6a2 2 0 0 1 2-2h7l6 6v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M13 4v6h6"/></svg>
-        </span>
-        <span class="label">Entre em contato via Formulário<small>Conte-me sobre o seu projeto</small></span>
-        <span class="arrow">→</span>
-      </a>
-
-      <a href="https://maps.app.goo.gl/W5brUYU9J1Z39ywH7" class="btn location" target="_blank" rel="noopener noreferrer">
+      <a href="https://maps.app.goo.gl/PkvAjW5S8NBTBNK38" class="btn location" target="_blank" rel="noopener noreferrer">
         <span class="icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.1-7-11.3A7 7 0 0 1 12 3a7 7 0 0 1 7 6.7C19 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
         </span>
@@ -556,17 +603,18 @@
         <span class="arrow">→</span>
       </a>
 
-      <a href="https://maps.app.goo.gl/W5brUYU9J1Z39ywH7" class="map-card" target="_blank" rel="noopener noreferrer">
+      <a href="https://maps.app.goo.gl/PkvAjW5S8NBTBNK38" class="map-card" target="_blank" rel="noopener noreferrer">
         <div class="map-thumb">
           <iframe
-            src="https://maps.google.com/maps?q=-27.657766,-48.6840524&z=15&output=embed"
+            src="https://maps.google.com/maps?q=-27.777262876142533,-48.633780524530074&z=15&output=embed"
             width="100%" height="100%"
-            style="border:0;filter:grayscale(0.15) invert(0.92) contrast(0.9);pointer-events:none;"
+            style="border:0;filter:grayscale(0.35) contrast(0.95) brightness(0.9);pointer-events:none;"
             loading="lazy"
             referrerpolicy="no-referrer"
             sandbox="allow-scripts allow-same-origin"
             title="Mapa da localização">
           </iframe>
+          <div class="map-overlay"></div>
         </div>
         <div class="map-caption">
           <strong>Ver no mapa</strong>
@@ -615,6 +663,11 @@
       </div>
 
       <div class="dots" id="dots"></div>
+
+      <a href="https://api.whatsapp.com/send/?phone=554892063248&text=Ol%C3%A1!%20Vi%20os%20projetos%20e%20gostaria%20de%20conversar!&type=phone_number&app_absent=0" class="modal-cta" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.71.45 3.38 1.3 4.85L2.05 22l5.36-1.4a9.9 9.9 0 0 0 4.63 1.18h.01c5.46 0 9.9-4.45 9.9-9.9 0-2.65-1.03-5.13-2.9-7-1.87-1.87-4.35-2.9-7-2.9zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.13.82.84-3.06-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24zm4.52-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.48c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.22.89 2.4 1.02 2.57.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
+        Fale comigo
+      </a>
     </div>
   </div>
 
